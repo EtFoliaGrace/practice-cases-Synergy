@@ -1,4 +1,3 @@
-
 MAX_HEADS = 7
 
 
