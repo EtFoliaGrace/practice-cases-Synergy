@@ -22,12 +22,22 @@ def max_power_formula(n):
     return 2 * 3 ** ((n - 2) // 3)
 
 
+
 def main():
     n = int(input("Введите N (0 < N < 100): "))
+
     if not 0 < n < 100:
         print("Ошибка: N должно быть в диапазоне 0 < N < 100")
         return
-    print(max_power_dp(n))
+
+    dp_result = max_power_dp(n)
+    formula_result = max_power_formula(n)
+
+    if dp_result != formula_result:
+        print("Ошибка: результаты не совпадают")
+        return
+
+    print(dp_result)
 
 
 if __name__ == "__main__":
