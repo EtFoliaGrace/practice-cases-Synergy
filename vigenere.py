@@ -47,7 +47,16 @@ def decrypt(text, key):
 
 
 mode = input("Выберите режим (1 — шифрование, 2 — расшифровка): ")
-message = input("Введите текст: ")
+print("Вставь текст. Для завершения введи END на отдельной строке.")
+lines = []
+
+while True:
+    line = input()
+    if line == "END":
+        break
+    lines.append(line)
+
+message = "\n".join(lines)
 
 if mode == "1":
     print("Шифртекст:", encrypt(message, KEY))
