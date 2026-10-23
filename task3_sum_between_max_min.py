@@ -1,4 +1,3 @@
-
 def sum_negative_between_max_min(a):
     """Сумма отрицательных между максимумом и минимумом."""
     if len(a) < 3:
